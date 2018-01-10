@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	private javax.sql.DataSource dataSource;
 	
 	private static final String USER_QUERY = "SELECT custid, password, effect FROM custinfo WHERE custid = ?";
-	private static final String ROLE_QUERY = "SELECT custid, role FROM custinfo WHERE custid = ?";
+	private static final String ROLE_QUERY = "SELECT cid, role FROM custinfo WHERE custid = ?";
 	
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -63,7 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	}
 	
-
+/*
  	@Autowired
  	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
  		auth
@@ -71,9 +71,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
  		.withUser("user").password("password").roles("USER");
  	}
 
-     @Bean
-     public BCryptPasswordEncoder passwordEncoder() {
-         return new BCryptPasswordEncoder();
-     }
-
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		auth
+		//.authenticationProvider(authenticationProvider)
+		//.userDetailsService(userDetailsService)
+		.passwordEncoder(new BCryptPasswordEncoder());
+	}
+*/
 }
