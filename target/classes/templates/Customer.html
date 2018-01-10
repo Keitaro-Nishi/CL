@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>登録</title>
+</head>
+<body>
+<h1>登録ページ</h1>
+
+<form action="#" th:action="@{/Customer}" th:object="${customerForm}" method="post">
+    
+    
+    <p><label for="custid">ユーザーID</label>:
+       <input type="text" id="custid" name="custid" autofocus="autofocus" /></p>
+    <p><label for="custname">ユーザー名</label>:
+       <input type="text" id="custname" name="custname" /></p>
+    <p><label for="orgname">組織名</label>:
+       <input type="text" id="orgname" name="orgname" /></p>
+    <p><label for="password">パスワード</label>:
+       <input type="password" id="password" name="password" /></p>
+    
+       
+    <p><input type="submit" value="登録" /></p>
+    
+</form>
+<input type="submit" onclick="location.href='/CustomerList'" value = "一覧" />
+</body>
+</html>
