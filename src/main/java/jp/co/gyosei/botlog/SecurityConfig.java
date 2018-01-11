@@ -78,7 +78,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			return new HikariDataSource(config);
 		}
 	}
-	
+
 /*
  	@Autowired
  	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
