@@ -1,8 +1,7 @@
 package jp.co.gyosei.botlog;
 
 import java.sql.SQLException;
-
-import javax.activation.DataSource;
+import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -71,7 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Bean
 	@ConfigurationProperties("spring.datasource")
-	public HikariDataSource dataSource() throws SQLException {
+	public DataSource dataSource() throws SQLException {
 		if (dbUrl == null || dbUrl.isEmpty()) {
 			return new HikariDataSource();
 		} else {
