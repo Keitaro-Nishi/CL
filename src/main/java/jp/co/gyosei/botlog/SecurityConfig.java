@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Value("${spring.datasource.url}")
 	private String dbUrl;
 	@Autowired
-	@Qualifier("custinfo")
+	@Qualifier("dataSource")
 	private DataSource dataSource;
 	
 	private static final String USER_QUERY = "SELECT custid, password, effect FROM custinfo WHERE custid = ?";
@@ -78,7 +78,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			return new HikariDataSource(config);
 		}
 	}
-
+	
 /*
  	@Autowired
  	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
