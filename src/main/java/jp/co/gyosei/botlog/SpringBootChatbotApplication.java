@@ -1,4 +1,3 @@
-/*
 package jp.co.gyosei.botlog;
 
 import org.springframework.boot.SpringApplication;
@@ -13,4 +12,3 @@ public class SpringBootChatbotApplication {
 		SpringApplication.run(SpringBootChatbotApplication.class, args);
 	}
 }
-*/
