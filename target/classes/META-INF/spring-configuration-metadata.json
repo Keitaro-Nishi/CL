@@ -1,0 +1,12 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "jp.co.gyosei.botlog.SecurityConfig",
+      "name": "spring.datasource",
+      "sourceMethod": "public javax.sql.DataSource dataSource() throws java.sql.SQLException",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": []
+}
