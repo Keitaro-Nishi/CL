@@ -1,6 +1,7 @@
 package jp.co.gyosei.botlog;
 
 import java.sql.SQLException;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +15,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-//import com.zaxxer.hikari.HikariConfig;
-//import com.zaxxer.hikari.HikariDataSource;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-	/*
+	
 	@Value("${spring.datasource.url}")
 	private String dbUrl;
 	@Autowired
@@ -36,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.usersByUsernameQuery(USER_QUERY)
 		.authoritiesByUsernameQuery(ROLE_QUERY);
 	}
-	*/
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
@@ -66,7 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.permitAll();
 
 	}
-	/*
+	
 	@Bean
 	@ConfigurationProperties("spring.datasource")
 	public DataSource dataSource() throws SQLException {
@@ -78,15 +79,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			return new HikariDataSource(config);
 		}
 	}
-	*/
-
+	
+/*
  	@Autowired
  	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
  		auth
  		.inMemoryAuthentication()
  		.withUser("user").password("password").roles("USER");
  	}
-/*
+
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth
