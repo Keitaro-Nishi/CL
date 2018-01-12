@@ -33,45 +33,41 @@ public class CustinfoEntityImpl implements UserDetails
     @Column(nullable = false)
     private Collection<? extends GrantedAuthority> role;
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities()
-    {
+    public CustinfoEntityImpl(String custid, String password) {
+	}
+
+	@Override
+    public Collection<? extends GrantedAuthority> getAuthorities(){
         return this.role;
     }
 
     @Override
-    public String getPassword()
-    {
+    public String getPassword(){
         return this.password;
     }
 
     @Override
-    public String getUsername()
-    {
+    public String getUsername(){
         return this.custid;
     }
 
     @Override
-    public boolean isAccountNonExpired()
-    {
+    public boolean isAccountNonExpired(){
         return true;
     }
 
     @Override
-    public boolean isAccountNonLocked()
-    {
+    public boolean isAccountNonLocked(){
         return true;
     }
 
     @Override
-    public boolean isCredentialsNonExpired()
-    {
+    public boolean isCredentialsNonExpired() {
         return true;
     }
 
     @Override
-    public boolean isEnabled()
-    {
+    public boolean isEnabled(){
         return true;
     }
 

@@ -1,4 +1,3 @@
-/*
 package jp.co.gyosei.botlog.impl;
 
 import java.util.Collection;
@@ -13,7 +12,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import jp.co.gyosei.botlog.impl.CustinfoEntityImpl;
-//import jp.co.gyosei.botlog.LoginCust;
 import jp.co.gyosei.botlog.LoginUserDetails;
 import jp.co.gyosei.botlog.domain.repository.CustinfoRepositoryCustom;
 
@@ -36,7 +34,7 @@ public class AuthenticationProviderImpl implements AuthenticationProvider {
 			throw new AuthenticationCredentialsNotFoundException("ログイン情報に不備があります。");
 		}
 		
-		CustinfoEntityImpl custinfoEntityImpl = CustinfoRepositoryCustom.custinfoRepositoryCustom(custid, password, role);
+		CustinfoEntityImpl custinfoEntityImpl = CustinfoRepositoryCustom.custinfoRepositoryCustom(custid, password);
 		
 		if (custinfoEntityImpl == null) {
 			// 例外はSpringSecurityにあったものを適当に使用
@@ -59,4 +57,3 @@ public class AuthenticationProviderImpl implements AuthenticationProvider {
 		this.custinfoRepositoryCustom = custinfoRepositoryCustom;
 	}
 }
-*/
