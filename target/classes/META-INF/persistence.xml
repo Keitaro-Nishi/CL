@@ -5,12 +5,13 @@
 	<persistence-unit name="Chatbot">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<properties>
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost/test?useUnicode=true&amp;characterEncoding=utf8" />
-			<property name="javax.persistence.jdbc.user" value="kazuhira" />
-			<property name="javax.persistence.jdbc.password" value="password" />
+				value="jdbc:postgres://kkvlfxedsutjzl:4c83a1411ad6598fa2a3b5e5458aac3bd30ca748fa56d7938026476b28f684c4@ec2-54-235-76-111.compute-1.amazonaws.com:5432/dd41ia43dj64c6" />
+			<property name="javax.persistence.jdbc.user" value="kkvlfxedsutjzl" />
+			<property name="javax.persistence.jdbc.password"
+				value="4c83a1411ad6598fa2a3b5e5458aac3bd30ca748fa56d7938026476b28f684c4" />
 		</properties>
 	</persistence-unit>
 </persistence>
