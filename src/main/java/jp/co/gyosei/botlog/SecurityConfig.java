@@ -20,9 +20,6 @@ import jp.co.gyosei.botlog.LoginUserDetails;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private DataSource dataSource;
-	
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
 	/*
@@ -64,13 +61,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.userDetailsService(userDetailsService)
 		.passwordEncoder(new BCryptPasswordEncoder());
 	}
-	/*
-	public CustinfoService getCustinfoService() {
-		return custinfoService;
-	}
-
-	public void setCustinfoService(CustinfoService custinfoService) {
-		this.custinfoService = custinfoService;
-	}
-	 */
+	 
 }

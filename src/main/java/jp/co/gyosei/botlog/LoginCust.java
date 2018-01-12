@@ -27,13 +27,13 @@ public class LoginCust extends User {
 		return new MyUserDetail(entity.getId(), entity.getLoginId(), entity.getPassword(), entity.getName(), authorities);
 	}
 
-	// ’Ç‰Á‚·‚éiƒe[ƒuƒ‹‚Åƒ†[ƒU[‚ÌƒL[‚Æ‚È‚é’l‚ğİ’è‚·‚éj
+	// ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Åƒï¿½ï¿½[ï¿½Uï¿½[ï¿½ÌƒLï¿½[ï¿½Æ‚È‚ï¿½lï¿½ï¿½İ’è‚·ï¿½ï¿½j
 	public String custid;
 
-	// ’Ç‰Á‚·‚é
+	// ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½
 	public String password;
 
-	// ’Ç‰Á‚·‚é
+	// ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½
 	public String role;
 
 	public LoginCust(CustinfoEntityImpl cust) {

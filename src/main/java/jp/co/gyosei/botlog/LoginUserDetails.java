@@ -10,9 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import jp.co.gyosei.botlog.impl.CustinfoEntityImpl;
 
 public class LoginUserDetails implements UserDetails {
-    /**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private String custid;
     private String password;
@@ -29,11 +27,6 @@ public class LoginUserDetails implements UserDetails {
 	public LoginUserDetails(CustinfoEntityImpl custinfoEntityImpl) {
 	}
 
-	/**
-    * {@link Users}を元にインスタンスを生成します。
-    * @param user 生成元になるユーザ
-    * @return
-    */
     public static UserDetails create(CustinfoEntityImpl entity) {
         return new LoginUserDetails(entity.getCustid(), entity.getPassword(), entity.getRole());
     }
@@ -50,25 +43,21 @@ public class LoginUserDetails implements UserDetails {
 
 	@Override
 	public boolean isAccountNonExpired() {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
 	@Override
 	public boolean isEnabled() {
-		// TODO 自動生成されたメソッド・スタブ
 		return false;
 	}
 
