@@ -1,10 +1,6 @@
 package jp.co.gyosei.botlog;
 
-import javax.activation.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -13,19 +9,17 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import jp.co.gyosei.botlog.impl.UserDetailsServiceImpl;
-import jp.co.gyosei.botlog.domain.service.CustinfoService;
 import jp.co.gyosei.botlog.impl.AuthenticationProviderImpl;
-import jp.co.gyosei.botlog.LoginUserDetails;
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
-	/*
+	
 	@Autowired
 	private AuthenticationProviderImpl authenticationProvider;
-	 */
+	 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
