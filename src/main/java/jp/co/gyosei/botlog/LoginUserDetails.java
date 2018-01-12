@@ -25,7 +25,7 @@ public class LoginUserDetails implements UserDetails {
 	}
 
     public static UserDetails create(CustinfoEntityImpl entity) {
-        return new LoginUserDetails(entity.getCustid(), entity.getPassword(), entity.getRole());
+        return new LoginUserDetails(entity.getUsername(), entity.getPassword(), entity.getAuthorities());
     }
 
 	@Override

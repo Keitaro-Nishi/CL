@@ -27,11 +27,14 @@ public class CustinfoEntityImpl implements UserDetails
 
     @Column(nullable = false)
     private String password;
+    
+    @Column(nullable = false)
+    private Collection<? extends GrantedAuthority> role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities()
     {
-        return null;
+        return this.role;
     }
 
     @Override
