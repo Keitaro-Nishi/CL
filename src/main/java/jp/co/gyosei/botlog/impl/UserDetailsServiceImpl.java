@@ -24,7 +24,7 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
             throw new UsernameNotFoundException("custid is empty");
         }
 
-        CustinfoEntityImpl foundUser = custinfoRepositoryCustom.findByCustid(custid);
+        CustinfoEntityImpl foundUser = custinfoRepositoryCustom.findByUsername(custid);
         if( foundUser != null ){
             return foundUser.toLoginUserDetails();
         }

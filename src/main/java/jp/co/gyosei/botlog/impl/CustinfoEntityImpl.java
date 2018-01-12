@@ -12,6 +12,8 @@ import javax.persistence.Table;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import jp.co.gyosei.botlog.LoginUserDetails;
+
 @Entity
 @Table(name = "custinfo")
 public class CustinfoEntityImpl implements UserDetails
@@ -72,4 +74,8 @@ public class CustinfoEntityImpl implements UserDetails
     {
         return true;
     }
+
+	public UserDetails toLoginUserDetails() {
+		return LoginUserDetails.create(this);
+	}
 }
