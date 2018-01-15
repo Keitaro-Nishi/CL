@@ -1,3 +1,4 @@
+/*
 package jp.co.gyosei.botlog.app;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -30,9 +31,10 @@ public class LoginController {
 
         @RequestMapping(value = "/menu")
         public String memu(@AuthenticationPrincipal LoginUserDetails cust, Model model) {
-            // @AuthenticationPrincipal‚ğg‚¤‚Æ”FØƒIƒuƒWƒFƒNƒg‚ğQÆ‚Å‚«‚éB
+            // @AuthenticationPrincipalï¿½ï¿½ï¿½gï¿½ï¿½ï¿½Æ”Fï¿½ØƒIï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½ï¿½Qï¿½Æ‚Å‚ï¿½ï¿½ï¿½B
 
             return "menu";
         }
     }
 }
+*/

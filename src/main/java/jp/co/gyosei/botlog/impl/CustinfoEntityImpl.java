@@ -1,3 +1,4 @@
+/*
 package jp.co.gyosei.botlog.impl;
 
 import java.util.Collection;
@@ -75,3 +76,4 @@ public class CustinfoEntityImpl implements UserDetails
 		return LoginUserDetails.create(this);
 	}
 }
+*/

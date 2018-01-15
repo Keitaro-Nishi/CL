@@ -1,3 +1,4 @@
+/*
 package jp.co.gyosei.botlog.domain.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,3 +12,4 @@ public interface CustinfoRepositoryCustom extends JpaRepository<CustinfoEntityIm
 		return new CustinfoEntityImpl(custid, password);
 	}
 }
+*/

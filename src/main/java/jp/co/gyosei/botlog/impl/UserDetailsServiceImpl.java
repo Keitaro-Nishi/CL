@@ -1,3 +1,4 @@
+/*
 package jp.co.gyosei.botlog.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,6 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
     @Autowired
     private CustinfoRepositoryCustom custinfoRepositoryCustom;
 
-    /* (非 Javadoc)
-    * @see org.springframework.security.core.userdetails.UserDetailsService#loadUserBycustid(java.lang.String)
-    */
     @Override
     public UserDetails loadUserByUsername(String custid)
             throws UsernameNotFoundException {
@@ -31,3 +29,4 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
         throw new UsernameNotFoundException( custid + "is not found");
     }
 }
+*/
