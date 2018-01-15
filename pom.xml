@@ -113,14 +113,13 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>5.0.12.Final</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure -->
+<!-- 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
 			<version>1.0.0.RELEASE</version>
 		</dependency>
-
+ -->
 	</dependencies>
 
 	<build>
