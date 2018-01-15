@@ -1,4 +1,3 @@
-/*
 package jp.co.gyosei.botlog.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,4 +28,3 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
         throw new UsernameNotFoundException( custid + "is not found");
     }
 }
-*/

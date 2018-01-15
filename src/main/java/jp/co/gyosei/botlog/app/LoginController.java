@@ -1,4 +1,3 @@
-/*
 package jp.co.gyosei.botlog.app;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -37,4 +36,3 @@ public class LoginController {
         }
     }
 }
-*/

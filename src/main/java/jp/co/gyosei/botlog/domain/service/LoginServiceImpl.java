@@ -1,4 +1,3 @@
-/*
 package jp.co.gyosei.botlog.domain.service;
 
 import org.apache.commons.lang3.StringUtils;
@@ -39,4 +38,3 @@ public class LoginServiceImpl implements UserDetailsService
         this.custinfoRepositoryCustom = custinfoRepositoryCustom;
     }
 }
-*/
